@@ -1,24 +1,21 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
+import { ComponentItemListContainer } from './Componentes/Contenedor/ItemListContainer';
+import { ComponentNavbar } from './Componentes/Navbar/Navbar';
+import { ComponentCartWidget } from './Componentes/CartWidget/CartWidget';
 
 function App() {
+
+  const tituloDePagina = "Tienda Ropa";
+  const mensaje = "Toda tu ropa en un solo lugar";
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <ComponentNavbar titulo = { tituloDePagina }> 
+      <ComponentCartWidget />
+    </ComponentNavbar>
+    <ComponentItemListContainer greeting = { mensaje } />
+  </>
   );
 }
 
