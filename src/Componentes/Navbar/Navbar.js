@@ -19,7 +19,7 @@ export const ComponentNavbar = ({ titulo, children }) => {
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
                 <Navbar.Brand href="#home">
-                    <img src={ logo } width="150" height="100" className="d-inline-block align-top" alt="Logo de pagina" />
+                    <img src={ logo } width="100" height="100" className="d-inline-block align-top" alt="Logo de pagina" />
                 </Navbar.Brand>
                 <Navbar.Brand href="#">{titulo}</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />

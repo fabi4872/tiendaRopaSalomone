@@ -3,6 +3,7 @@ import './App.css';
 import { ComponentItemListContainer } from './Componentes/Contenedor/ItemListContainer';
 import { ComponentNavbar } from './Componentes/Navbar/Navbar';
 import { ComponentCartWidget } from './Componentes/CartWidget/CartWidget';
+import ItemCount from './Componentes/ItemCount/ItemCount';
 
 function App() {
 
@@ -11,11 +12,11 @@ function App() {
 
   return (
     <>
-    <ComponentNavbar titulo = { tituloDePagina }> 
-      <ComponentCartWidget />
-    </ComponentNavbar>
-    <ComponentItemListContainer greeting = { mensaje } />
-  </>
+      <ComponentNavbar titulo={tituloDePagina}>
+        <ComponentCartWidget />
+      </ComponentNavbar>
+      <ComponentItemListContainer greeting={mensaje} />
+    </>
   );
 }
 

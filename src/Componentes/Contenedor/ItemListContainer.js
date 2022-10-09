@@ -1,11 +1,19 @@
 import React from "react";
-
-//para bootstrap
+import ItemCount from "../ItemCount/ItemCount";
 import Badge from 'react-bootstrap/Badge'; 
 
-
 export const ComponentItemListContainer = ({ greeting }) => {
-    return  <h3>
-                { greeting } <Badge bg="secondary">En construcción</Badge>
+    const onAdd = (count) =>{
+        console.log(`El usuario agregó ${count} productos.`);
+    }
+
+    
+    return (
+        <>
+            <h3>
+                {greeting} <Badge bg="secondary"></Badge>
             </h3>
+            <ItemCount initial={1} stock={10} onAdd={onAdd} />
+        </>
+    );
 }
