@@ -1,19 +1,39 @@
-import React from "react";
-import ItemCount from "../ItemCount/ItemCount";
-import Badge from 'react-bootstrap/Badge'; 
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { ItemList } from "./ItemList/ItemList";
 
 export const ComponentItemListContainer = ({ greeting }) => {
-    const onAdd = (count) =>{
-        console.log(`El usuario agregó ${count} productos.`);
-    }
 
+    //siguiendo la clase de coder
+    const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const { id } = useParams();
+  
+    const URL_BASE = 'https://fakestoreapi.com/products';
+    const URL_CAT = `${URL_BASE}/category/${id}`;
+  
+    useEffect(()=>{
+      const getProducts = async () => {
+        try {
+          const res = await fetch(id ? URL_CAT : URL_BASE);
+          const data = await res.json(); 
+          setProducts(data);      
+        } catch (error) {
+          console.log(error);      
+        } finally {
+          setLoading(false);
+        }
+      };
+      getProducts();
+    },[id]);
     
     return (
-        <>
-            <h3>
-                {greeting} <Badge bg="secondary"></Badge>
-            </h3>
-            <ItemCount initial={1} stock={10} onAdd={onAdd} />
-        </>
-    );
+      <>
+        {
+          <>
+            { loading ? <h1>Cargando ....</h1> : <ItemList products={products} title={greeting} /> }
+          </>
+        }
+      </>
+    )
 }
