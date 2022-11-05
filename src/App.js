@@ -1,9 +1,13 @@
 import NavBar from './components/NavBar/NavBar';
+import CartWidget from './components/CartWidget/CartWidget';
+import './App.css';
 
 function App() {
   return (
     <>
-      <NavBar />
+      <NavBar>
+        <CartWidget />
+      </NavBar>
     </>
   );
 }
