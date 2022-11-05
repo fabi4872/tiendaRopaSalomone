@@ -6,7 +6,7 @@ export const styles={
         alignItems: 'center',
         height: 'auto',
         padding: '0 1.5rem 0 3rem',
-        boxShadow: '0 1rem 1rem 0 #333333',
+        boxShadow: '0 0.5rem 0.5rem 0 #C13CCB',
     },
     logo:{
         objectFit: 'cover',
@@ -26,7 +26,7 @@ export const styles={
     },
     a:{
         textDecoration: 'none',
-        color: '#595959',
+        color: '#A20BAE',
         fontWeight: '600',
     }
 }
