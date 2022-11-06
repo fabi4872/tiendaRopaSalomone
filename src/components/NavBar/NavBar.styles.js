@@ -6,6 +6,7 @@ export const styles={
         alignItems: 'center',
         height: 'auto',
         padding: '0 3rem',
+        borderBottom: '0.1rem solid blue',
         boxShadow: '0 0.5rem 0.5rem 0 #C13CCB',
     },
     logo:{

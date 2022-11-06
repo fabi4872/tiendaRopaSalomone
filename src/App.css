@@ -13,3 +13,16 @@
 .botonCartWidget:visited{
   color: #3432D7;
 }
+.body{
+    height: 100vh;
+}
+.nav{
+    height: 20%;
+}
+.main{
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}

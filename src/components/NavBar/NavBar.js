@@ -13,7 +13,7 @@ const NavBar = ({ children }) => {
   ]
 
   return (
-    <nav style={styles.nav}>
+    <nav style={styles.nav} className='nav'>
         <a style={styles.a} href='/Home'><img style={styles.logo} src={logo} alt='Imagen de logo' /></a>
         <ul style={styles.ul}>
             {
