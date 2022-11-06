@@ -3,26 +3,155 @@
     color: #A20BAE;
     font-weight: 600;
 }
+
 .anchorNavBar:hover{
     color: violet;
     border-bottom: 0.2rem solid #A20BAE;;
 }
+
 .botonCartWidget{
     margin-left: 1.5rem;
 }
+
 .botonCartWidget:visited{
   color: #3432D7;
 }
-.body{
-    height: 100vh;
-}
+
 .nav{
     height: 20%;
 }
+
 .main{
     height: 80%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin: 2rem 0;
 }
+
+.lds-spinner {
+    color: official;
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-spinner div {
+    transform-origin: 40px 40px;
+    animation: lds-spinner 1.2s linear infinite;
+  }
+  .lds-spinner div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 37px;
+    width: 6px;
+    height: 18px;
+    border-radius: 20%;
+    background: #fff;
+  }
+  .lds-spinner div:nth-child(1) {
+    transform: rotate(0deg);
+    animation-delay: -1.1s;
+  }
+  .lds-spinner div:nth-child(2) {
+    transform: rotate(30deg);
+    animation-delay: -1s;
+  }
+  .lds-spinner div:nth-child(3) {
+    transform: rotate(60deg);
+    animation-delay: -0.9s;
+  }
+  .lds-spinner div:nth-child(4) {
+    transform: rotate(90deg);
+    animation-delay: -0.8s;
+  }
+  .lds-spinner div:nth-child(5) {
+    transform: rotate(120deg);
+    animation-delay: -0.7s;
+  }
+  .lds-spinner div:nth-child(6) {
+    transform: rotate(150deg);
+    animation-delay: -0.6s;
+  }
+  .lds-spinner div:nth-child(7) {
+    transform: rotate(180deg);
+    animation-delay: -0.5s;
+  }
+  .lds-spinner div:nth-child(8) {
+    transform: rotate(210deg);
+    animation-delay: -0.4s;
+  }
+  .lds-spinner div:nth-child(9) {
+    transform: rotate(240deg);
+    animation-delay: -0.3s;
+  }
+  .lds-spinner div:nth-child(10) {
+    transform: rotate(270deg);
+    animation-delay: -0.2s;
+  }
+  .lds-spinner div:nth-child(11) {
+    transform: rotate(300deg);
+    animation-delay: -0.1s;
+  }
+  .lds-spinner div:nth-child(12) {
+    transform: rotate(330deg);
+    animation-delay: 0s;
+  }
+  @keyframes lds-spinner {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .section-card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .card{
+    width: 20vw;
+    height: auto;
+    padding: 1rem;
+    margin: 1rem;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    border: 0.1rem solid #CCC;
+  }
+  .card-imagen{
+    width: auto;
+    height: 7rem;
+    object-fit: cover;
+  }
+  .card-titulo{
+    padding: 0.5rem 0;
+    height: 3rem;
+  }
+  .card-descripcion{
+    padding: 0.5rem 0;
+    height: 10rem;
+    overflow: auto;
+  }
+  .card-precio{
+    padding: 0.5rem 0;
+  }
+  .card-boton{
+    padding-top: 0.5rem;
+    background-color: #A20BAE;
+    color: white;
+    padding: 0.5rem 2rem;
+    border-radius: 0.2rem;
+    border: none;
+    cursor: pointer;
+  }
+  .card-boton:hover{
+    background-color: #4d0252;
+  }
