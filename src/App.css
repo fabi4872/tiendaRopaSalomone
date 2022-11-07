@@ -89,6 +89,7 @@
   border-radius: 0.2rem;
   border: none;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .card-boton:hover {

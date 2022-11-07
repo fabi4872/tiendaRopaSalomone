@@ -2,10 +2,9 @@ import React from 'react';
 import Item from '../Item/Item';
 import '../../App.css';
 
-const ItemList = ({productos, titulo}) => {
+const ItemList = ({productos}) => {
   return (
     <>
-      <h1 className='titulo'>{titulo}</h1>
       <section className='section-card'>
       {
         productos.map((producto)=>{

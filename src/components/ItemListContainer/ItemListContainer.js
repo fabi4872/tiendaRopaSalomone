@@ -28,14 +28,15 @@ const ItemListContainer = ({greeting}) => {
       }
     };
     obtenerProductos();
-  },[id]);
+  },[id, URL_CAT, URL_BASE]);
 
   return (
-    <main className='main'>
-      <>
-        {loading ? <Loading /> : <ItemList productos={productos} titulo={greeting} />}
-      </>
-    </main>
+    <>
+      <h1 className='titulo-detalle'>{greeting}</h1>
+      <main className='main'>
+        {loading ? <Loading /> : <ItemList productos={productos} />}
+      </main>
+    </>
   )
 }
 
