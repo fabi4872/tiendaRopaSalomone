@@ -14,6 +14,8 @@ const ItemListContainer = ({greeting}) => {
   const URL_CAT = `${URL_BASE}/category/${id}`;
 
   useEffect(()=>{
+    setLoading(true);
+
     const obtenerProductos = async () => {
       try {
         const respuesta = await fetch(id ? URL_CAT : URL_BASE);
@@ -31,11 +33,7 @@ const ItemListContainer = ({greeting}) => {
   return (
     <main className='main'>
       <>
-        {
-          <>
-            {loading ? <Loading /> : <ItemList productos={productos} titulo={greeting} />}
-          </>
-        }
+        {loading ? <Loading /> : <ItemList productos={productos} titulo={greeting} />}
       </>
     </main>
   )

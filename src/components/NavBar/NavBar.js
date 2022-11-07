@@ -11,15 +11,15 @@ const NavBar = ({children}) => {
     // { id:3, ruta:'/categoria/Sweters', descripcion:'SWEATERS' },
     // { id:4, ruta:'/categoria/Camisas', descripcion:'CAMISAS' },
     // { id:5, ruta:'/categoria/Camperas', descripcion:'CAMPERAS' },
-    { id: 1, descripcion: "ELECTRONICA", ruta: "/categoria/electronics"},
-    { id: 2, descripcion: "JOYERIA", ruta: "categoria/jewelery"},
-    { id: 3, descripcion: "ROPA DE HOMBRE", ruta: "categoria/men's clothing"},
-    { id: 4, descripcion: "ROPA DE MUJER", ruta: "categoria/women's clothing"},
+    {id: 1, descripcion: "ELECTRONICA", ruta: "categoria/electronics"},
+    {id: 2, descripcion: "JOYERIA", ruta: "categoria/jewelery"},
+    {id: 3, descripcion: "ROPA DE HOMBRE", ruta: "categoria/men's clothing"},
+    {id: 4, descripcion: "ROPA DE MUJER", ruta: "categoria/women's clothing"},
   ]
 
   return (
     <nav style={styles.nav} className='nav'>
-        <NavLink style={styles.a} to='/Home'><img style={styles.logo} src={logo} alt='Imagen de logo' /></NavLink>
+        <NavLink style={styles.a} to='/'><img style={styles.logo} src={logo} alt='Imagen de logo' /></NavLink>
         <ul style={styles.ul}>
             {
                 categorias.map((categoria)=>{
