@@ -60,6 +60,19 @@
   border: 0.1rem solid #CCC;
 }
 
+.card-count {
+  width: 25rem;
+  height: auto;
+  padding: 1rem;
+  margin: 1rem;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-self: flex-start;
+  border: 0.1rem solid #CCC;
+  text-align: center;
+}
+
 .card-imagen {
   width: auto;
   height: 7rem;
@@ -90,8 +103,56 @@
   border: none;
   cursor: pointer;
   text-decoration: none;
+  margin: 1rem;
+}
+
+.card-boton-continuar {
+  padding-top: 0.5rem;
+  background-color: #2f25af;
+  color: white;
+  padding: 0.5rem 2rem;
+  border-radius: 0.2rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 1rem;
+}
+
+.btn {
+  padding-top: 0.5rem;
+  color: white;
+  padding: 0.5rem 2rem;
+  border-radius: 0.2rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-primary {
+  background-color: #227cb8;
+  margin-top: 1rem;
+}
+.btn-primary:hover {
+  background-color: #044b7a;
+}
+.btn-danger {
+  background-color: #c73a3a;
+  margin-top: 1rem;
+}
+.btn-danger:hover {
+  background-color: red;
+}
+.btn-secondary {
+  background-color: #2f25af;
+  margin: 1rem 0 2rem 0;
+}
+.btn-secondary:hover {
+  background-color: #1b10ac;
 }
 
 .card-boton:hover {
   background-color: #4d0252;
+}
+
+.card-boton-continuar:hover {
+  background-color: #1b10ac;
 }
