@@ -23,13 +23,12 @@
   width: auto;
 }
 
-.titulo {
-  margin-bottom: 2.5rem;
-}
-
 .titulo-detalle {
   text-align: center;
-  margin: 3.5rem 0 2.5rem 0;
+  margin: 3.5rem 0 2.2rem 0;
+  font-family: sans-serif;
+  color: #0000EE;
+  text-shadow: 1px 1px 0px rgb(156, 252, 247), 1px 1px 0px rgb(156, 252, 247);
 }
 
 .main {
