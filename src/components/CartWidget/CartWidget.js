@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { useContext } from "react";
+import { CartContext } from "../CartContext/CartContext";
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import '../../App.css';
 
 const CartWidget = () => {
+  const { qty } = useContext(CartContext);
+
   return (
-    <a className='botonCartWidget' href='/cart'>
+    <>
+      <p>{ qty }</p>
+      <div className='botonCartWidget'>
         <ShoppingCartIcon />
-    </a>
+      </div>
+    </>
   )
 }
 

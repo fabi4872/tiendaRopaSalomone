@@ -1,12 +1,15 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import ItemCount from '../ItemCount/ItemCount';
+import { CartContext } from "../CartContext/CartContext";
 import { Link } from 'react-router-dom';
 import '../../App.css';
 
 const ItemDetail = ({producto}) => {
+  const {addItem} = useContext(CartContext);
   const [showItemCount, setShowItemCount] = useState(true);
   const onAdd = (count) => {
-    console.log("se agregan " + count + " unidades");
+    addItem(producto, count);
+    console.log("Se agregan " + count + " unidades");
     setShowItemCount(false);
   }
 
