@@ -1,7 +1,7 @@
 import React from "react";
 import NavBar from './components/NavBar/NavBar';
 import CartWidget from './components/CartWidget/CartWidget';
-import { Cart } from './components/Cart/Cart/';
+import { Cart } from './components/Cart/Cart';
 import { CartContextProvide } from './components/CartContext/CartContext';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
