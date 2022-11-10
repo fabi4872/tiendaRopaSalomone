@@ -155,3 +155,21 @@
 .card-boton-continuar:hover {
   background-color: #1b10ac;
 }
+
+.cart-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.cart-cantidad {
+  position: absolute;
+  font-weight: bold;
+  text-align: center;
+  color: #A20BAE;
+  right: 2rem;
+  top: -1.5rem;
+}

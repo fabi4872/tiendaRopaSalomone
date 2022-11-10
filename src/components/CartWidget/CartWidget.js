@@ -9,10 +9,12 @@ const CartWidget = () => {
 
   return (
     <>
-      <p>{ qty }</p>
-      <Link className='botonCartWidget' to={'/cart'}>
-        <ShoppingCartIcon />
-      </Link>
+      <div className="cart-container">
+        <p className="cart-cantidad">{ qty }</p>
+        <Link className="botonCartWidget" to={"/cart"}>
+          <ShoppingCartIcon />
+        </Link>
+      </div>
     </>
   )
 }
