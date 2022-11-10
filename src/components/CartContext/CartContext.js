@@ -14,12 +14,13 @@ export const CartContextProvide = ({ children }) => {
             cart.forEach((producto => {
                 if (producto.id === item.id) {
                     producto.cantidad = cantidad + producto.cantidad;
+                    setQty(qty + cantidad); 
                     setCart(cart);
                 }
             }))
         } else {
             setCart([...cart, {...item, cantidad}])    
-        }        
+        }      
     }
 
     //borra un elemento del carro
@@ -46,7 +47,7 @@ export const CartContextProvide = ({ children }) => {
         })
         setQty(cantCarrito);
         setTotal(totalC);        
-    }, [cart]); //con esto de 'cart' decimos que .. cuando el estado de cart cambia, el ussetEfect actualiza.
+    }, [cart, qty]); //con esto de 'cart' decimos que .. cuando el estado de cart cambia, el ussetEfect actualiza.
 
     //para corroborar si un producto esta en el carrito
     const isInCart = (id) => {
