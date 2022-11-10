@@ -7,10 +7,6 @@ export const CartContextProvide = ({ children }) => {
     const [cart, setCart] = useState([]);    //estado para el carrito
     const [qty, setQty] = useState(0);       //estado para contar las cantidades
     const [total, setTotal] = useState(0);   //estado para la suma total del carrito
-
-   
-
-    //---------------- funciones ---------------------------
     
     //agrega un elemento al carro
     const addItem = (item, cantidad) => {        
@@ -32,7 +28,6 @@ export const CartContextProvide = ({ children }) => {
         setCart(filtrado);
     }
 
-
     const cantidadProducto = (item) => {
         return cart.filter(p => p.id === item.id);
     }
@@ -53,7 +48,7 @@ export const CartContextProvide = ({ children }) => {
         setTotal(totalC);        
     }, [cart]); //con esto de 'cart' decimos que .. cuando el estado de cart cambia, el ussetEfect actualiza.
 
-    //para ver si un producto esta en el carrito
+    //para corroborar si un producto esta en el carrito
     const isInCart = (id) => {
         return cart.some(item => item.id === id);
     }
@@ -64,7 +59,6 @@ export const CartContextProvide = ({ children }) => {
         setTotal(0);
     }
 
-    //retorno
     return (
       <CartContext.Provider value={{cart, qty, total, addItem, deleteItem, isInCart, clear, cantidadProducto}}> 
         {children} 

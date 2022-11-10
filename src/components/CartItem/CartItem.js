@@ -1,5 +1,8 @@
 import React,  { useContext } from "react";
 import { CartContext } from "../CartContext/CartContext";
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+import { red } from "@mui/material/colors";
+import "../../App.css";
 
 export const CartItem = ({id, titulo, cantidad, precioUnidad, total}) => {
 
@@ -7,12 +10,15 @@ export const CartItem = ({id, titulo, cantidad, precioUnidad, total}) => {
     const { deleteItem } = useContext(CartContext);
 
     return (
-        <ul>
-            <li>Producto: {titulo}</li>
-            <li>Cantidad: {cantidad}</li>
-            <li>Precio unitario: {precioUnidad}</li>
-            <li>Total precio: {total}</li>
-            <button onClick={()=> deleteItem(id)}>Eliminar producto</button>
-        </ul>
+        <tr>
+            <td className="table-info">#{id}</td>
+            <td className="table-info">{titulo}</td>
+            <td className="table-info">{cantidad}</td>
+            <td className="table-info">ARS {precioUnidad}</td>
+            <td className="table-info">ARS {total}</td>
+            <td className="table-info">
+                <button className="cart-item-delete" onClick={()=> deleteItem(id)}><DeleteForeverIcon sx={{ color: red[600] }}/></button>
+            </td>
+        </tr>
     )
 }
