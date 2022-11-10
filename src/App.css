@@ -76,11 +76,11 @@
 }
 .card-titulo {
   padding: 0.5rem 0;
-  height: 3rem;
+  height: 1.5rem;
 }
 .card-descripcion {
   padding: 0.5rem 0;
-  height: 10rem;
+  height: 3rem;
   overflow: auto;
 }
 .card-precio {

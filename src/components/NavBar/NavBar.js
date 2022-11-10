@@ -6,15 +6,10 @@ import '../../App.css';
 
 const NavBar = ({children}) => {
   const categorias = [
-    // { id:1, ruta:'/categoria/Remeras', descripcion:'REMERAS' },
-    // { id:2, ruta:'/categoria/Pantalones', descripcion:'PANTALONES' },
-    // { id:3, ruta:'/categoria/Sweters', descripcion:'SWEATERS' },
-    // { id:4, ruta:'/categoria/Camisas', descripcion:'CAMISAS' },
-    // { id:5, ruta:'/categoria/Camperas', descripcion:'CAMPERAS' },
-    {id: 1, descripcion: "ELECTRONICA", ruta: "categoria/electronics"},
-    {id: 2, descripcion: "JOYERIA", ruta: "categoria/jewelery"},
-    {id: 3, descripcion: "ROPA DE HOMBRE", ruta: "categoria/men's clothing"},
-    {id: 4, descripcion: "ROPA DE MUJER", ruta: "categoria/women's clothing"},
+    { id:1, ruta:'/categoria/remeras', descripcion:'REMERAS' },
+    { id:2, ruta:'/categoria/pantalones', descripcion:'PANTALONES' },
+    { id:3, ruta:'/categoria/sweaters', descripcion:'SWEATERS' },
+    { id:4, ruta:'/categoria/camisas', descripcion:'CAMISAS' }
   ]
 
   return (

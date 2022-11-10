@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ItemList from '../ItemList/ItemList';
 import Loading from '../Loading/Loading';
 import { useParams } from "react-router-dom";
+import { collection, getDocs, getFirestore, query, where } from "firebase/firestore";
 import '../../App.css';
 
 const ItemListContainer = ({greeting}) => {
@@ -9,26 +10,29 @@ const ItemListContainer = ({greeting}) => {
   const [loading, setLoading] = useState(true);
   const { id } = useParams();
 
-  //Armado de ruta
-  const URL_BASE = 'https://fakestoreapi.com/products';
-  const URL_CAT = `${URL_BASE}/category/${id}`;
+  function filtrarData(query){
+    getDocs(query).then(res => {
+      setProductos( res.docs.map(producto  => ({id:producto.id, ...producto.data()})))
+    })
+  }
 
   useEffect(()=>{
     setLoading(true);
 
-    const obtenerProductos = async () => {
-      try {
-        const respuesta = await fetch(id ? URL_CAT : URL_BASE);
-        const data = await respuesta.json(); 
-        setProductos(data);      
-      } catch (error) {
-        console.log(error);      
-      } finally {
-        setLoading(false);
-      }
-    };
-    obtenerProductos();
-  },[id, URL_CAT, URL_BASE]);
+    const querydb = getFirestore()
+    const queryCollection = collection(querydb, 'productos')
+    
+    if (id) {
+      const queryFilter = query(queryCollection, where('category','==', id))
+  
+      filtrarData(queryFilter)
+    }            
+    else {
+      filtrarData(queryCollection)
+    }
+    
+    setLoading(false)
+  }, [id]); 
 
   return (
     <>
