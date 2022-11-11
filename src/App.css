@@ -195,3 +195,8 @@
   padding: 1rem 0;
   font-size: 0.8rem;
 }
+
+.success {
+  color: rgb(23, 185, 23);
+  margin: 3rem 0;
+}
