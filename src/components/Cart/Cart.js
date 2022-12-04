@@ -11,9 +11,16 @@ export const Cart = () => {
     return (
         <>
           {cart.length === 0 ? (
-            <h1 className='titulo-detalle'>
-              No hay productos en el carrito. Ir a <Link to={"/"}>HOME</Link>
-            </h1>
+            <div>
+              <h1 className='titulo-detalle'>
+                No hay productos en el carrito
+              </h1>
+              <ul>
+                <li><Link to={"/"}>Catálogo de productos</Link></li>
+                <li><Link to={"/compras/"}>Compras</Link></li>
+              </ul>
+            </div>
+            
             ) : (
             <>
               <h1 className='titulo-detalle'>

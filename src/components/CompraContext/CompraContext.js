@@ -32,9 +32,9 @@ export const CompraContextProvide = ({ children }) => {
         const queryCollection = collection(querydb, 'orders')
 
         getDocs(queryCollection).then(res => {
-            setCompra( res.docs.map(venta  => ({id:venta.id, ...venta.data()})))
+            setCompra(res.docs.map(venta  => ({id:venta.id, ...venta.data()})))
         })
-    }, []);
+    }, [compra]);
 
     return (
     <ContextCompra.Provider value={{compra}}> 
