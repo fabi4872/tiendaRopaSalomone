@@ -24,7 +24,7 @@ const ItemDetail = ({producto}) => {
 
       <article className='card-count'>        
         {showItemCount ? ( 
-            <ItemCount initial={1} stock={10} onAdd={onAdd} />
+            <ItemCount initial={1} stock={producto.stock} onAdd={onAdd} />
         ) : (
             <>
               <Link className='card-boton' to = {'/cart'}>
