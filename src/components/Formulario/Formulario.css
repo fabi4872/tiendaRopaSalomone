@@ -1,0 +1,27 @@
+.container-form {
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+.inputDiv label {
+    display: flex;
+    flex-wrap: wrap;
+    color: blue;
+    font-size: 12px;
+    font-weight: bold;
+    width: 15rem;
+}
+
+input{
+    justify-content: center;
+}
+.form-flex{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-items: center;
+    margin-top: 2.5rem;
+    width: 50%;
+}

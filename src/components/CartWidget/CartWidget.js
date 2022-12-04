@@ -10,7 +10,7 @@ const CartWidget = () => {
   return (
     <>
       <div className="cart-container">
-        <p className="cart-cantidad">{ qty }</p>
+        { qty > 0 ? <p className="cart-cantidad">{qty}</p> : <p></p> } 
         <Link className="botonCartWidget" to={"/cart"}>
           <ShoppingCartIcon />
         </Link>

@@ -127,6 +127,7 @@
 .btn-danger {
   background-color: #c73a3a;
   margin-top: 1rem;
+  width: 12rem;
 }
 .btn-danger:hover {
   background-color: red;
@@ -134,9 +135,18 @@
 .btn-secondary {
   background-color: #2f25af;
   margin: 1rem 0 2rem 0;
+  width: 12rem;
 }
 .btn-secondary:hover {
   background-color: #1b10ac;
+}
+.btn-success {
+  background-color: green;
+  margin: 1rem 0 2rem 0;
+  width: 12rem;
+}
+.btn-success:hover {
+  background-color: rgb(2, 80, 2);
 }
 .card-boton:hover {
   background-color: #4d0252;
@@ -199,4 +209,12 @@
 .success {
   color: rgb(23, 185, 23);
   margin: 3rem 0;
+}
+
+.contenedorEmitirCompra{
+  margin-top: 2rem;
+}
+
+.bloque {
+    margin: 3rem 0;  
 }

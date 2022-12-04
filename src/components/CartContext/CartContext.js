@@ -60,8 +60,38 @@ export const CartContextProvide = ({ children }) => {
         setTotal(0);
     }
 
+    const [nombre,setNombre] = useState('')
+    const [apellido,setApellido] = useState('')
+    const [email,setEmail] = useState('')
+    const [telefono,setTelefono] = useState('')
+    const [localidad,setLocalidad] = useState('')
+    const [direccion,setDireccion] = useState('')
+    const [codigoPostal,setCodigoPostal] = useState('')
+
     return (
-      <CartContext.Provider value={{cart, qty, total, addItem, deleteItem, isInCart, clear, cantidadProducto}}> 
+      <CartContext.Provider value={{
+        cart, 
+        qty, 
+        total, 
+        addItem, 
+        deleteItem, 
+        isInCart, 
+        clear, 
+        cantidadProducto,
+        nombre,
+        setNombre,
+        apellido,
+        setApellido,
+        email,
+        setEmail,
+        telefono,
+        setTelefono,
+        localidad,
+        setDireccion,
+        direccion,
+        setLocalidad,
+        codigoPostal,
+        setCodigoPostal}}> 
         {children} 
       </CartContext.Provider> //con esta envoltura, los children acceden a la info de mi contexto. En value yo le paso a los children lo que quiero que tengan disponible
     );
